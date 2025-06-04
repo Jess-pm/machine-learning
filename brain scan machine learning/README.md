@@ -10,6 +10,7 @@ This project is for educational purposes. Data sources remain the property of th
 # 🧠 Brain Tumor Detection from MRI Images using CNN
 
 This project demonstrates the use of a Convolutional Neural Network (CNN) to classify brain MRI scans as either **has tumour** or **no tumour**. It was developed as a personal machine learning portfolio project using a dataset of **253 images** (155 with brain tumors, 98 without), trained in Google Colab, and deployed via a Gradio interface for interactive testing.
+Google colab link: https://drive.google.com/file/d/1MJdLVn2ar-2OGSmfFQ1jcGBtptmG7z_-/view?usp=sharing
 
 ## 📌 Project Highlights
 
