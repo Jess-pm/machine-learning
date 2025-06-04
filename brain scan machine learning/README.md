@@ -62,6 +62,7 @@ Test loss: 0.0708
 - Grayscale images only, no contrast enhancements or 3D imaging
 - Achieved high test accuracy on a small test set; future work could involve cross-validation, regularization tuning, or external validation datasets
 
+# 📁 Project Structure
 brain-scan-machine-learning/
 ├── Brain_tumour_detection_using_CNN.ipynb     # Main notebook
 ├── training images/                           # Optional: test images
