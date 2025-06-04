@@ -1,8 +1,8 @@
-# 🙋‍♂️ About the Author
+# 🙋‍♀️ About the Author
 This project was developed as part of my machine learning portfolio to demonstrate proficiency in:
 - CNN model design and evaluation
 - ML preprocessing pipelines
-- Hands-on deployment using Gradio
+- Hands-on deployment using TensorFlow and Gradio
 
 # 📜 License
 This project is for educational purposes. Data sources remain the property of their respective owners.
