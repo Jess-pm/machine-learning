@@ -1,45 +1,36 @@
 # 🙋‍♀️ About the Author
-This project was developed as part of my machine learning portfolio to demonstrate proficiency in:
-- CNN model design and evaluation
-- ML preprocessing pipelines
-- Hands-on deployment using TensorFlow and Gradio
+This project was developed as part of my portfolio to demonstrate proficiency in machine learning.
 
 # 📜 License
 This project is for educational purposes. Data sources remain the property of their respective owners.
 
-# 🧠 Brain Tumor Detection from MRI Images using CNN
-
-This project demonstrates the use of a Convolutional Neural Network (CNN) to classify brain MRI scans as either **has tumour** or **no tumour**. It was developed as a personal machine learning portfolio project using a dataset of **253 images** (155 with brain tumors, 98 without), trained in Google Colab, and deployed via a Gradio interface for interactive testing.
+# 🧠 Brain Tumor Detection from MRI Images using Convolutional Neural Network (CNN)
+This project demonstrates the use of a CNN to classify brain MRI scans as either **has tumour** or **no tumour**. It was developed as a personal machine learning portfolio project using a dataset of **253 images** (155 with brain tumors, 98 without), trained in Google Colab, and deployed via a Gradio interface for interactive testing.
 Google colab link: https://drive.google.com/file/d/1MJdLVn2ar-2OGSmfFQ1jcGBtptmG7z_-/view?usp=sharing
 
 ## 📌 Project Highlights
-
 - Trained a binary image classifier using CNN on grayscale brain MRI scans
 - Achieved 100% test accuracy on the evaluation set (see limitations below)
 - Deployed with a user-friendly **Gradio** interface for live image classification
 - Built and tested entirely in **Google Colab**
 
 ## 🗂️ Dataset Overview
-
 - Total images used: **253**
   - **155** MRI images with brain tumors
   - **98** MRI images of healthy brains
-- Images were pre-cleaned and labeled into two classes: `yes` (tumor), `no` (healthy)
-- Source: provided by course instructor
+- Images were labeled into two classes: `yes` (tumor), `no` (healthy)
+- Source: provided by NTUC LearningHub course instructor
 
 ## 🔎 Data Preprocessing
-
 - All images were:
-  - Resized to **150x150 pixels**
+  - Resized to **224x224 pixels**
   - Converted to **grayscale**
   - Normalized to scale pixel values between 0 and 1
-- Used **ImageDataGenerator** for basic data augmentation (e.g. rescale)
 
 > ⚖️ **No class balancing was applied.**
 Although the dataset had more tumor images (155 vs 98), the class imbalance was not severe enough to cause biased learning. Evaluation metrics and model performance showed the classifier handled both classes reliably without oversampling or undersampling.
 
 ## 🧠 Model Architecture
-
 Sequential CNN Model:
 - Conv2D → MaxPooling2D
 - Conv2D → MaxPooling2D
