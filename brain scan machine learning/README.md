@@ -15,6 +15,11 @@ Google colab link: https://drive.google.com/file/d/1MJdLVn2ar-2OGSmfFQ1jcGBtptmG
 - Deployed a real-time prediction interface using **Gradio**
 - Demonstrates tradeoff analysis between model complexity and data scale
 
+## 🎯 Product Thinking & Tradeoffs
+- Model simplicity: used shallow CNN to ensure speed and explainability
+- Business value: demonstrates feasibility of using off-the-shelf tools (Gradio, TensorFlow) to rapidly prototype health tech applications.
+- Scalability: easily extendable to more data or a transfer learning backbone like MobileNetV2 for higher accuracy and generalizability.
+
 ## 🗂️ Dataset Overview
 - Total images used: **253**
   - **155** MRI images with brain tumors
@@ -49,11 +54,6 @@ Sequential CNN (Keras):
 - Test accuracy: 1.0000
 - Test loss: 0.0708
 - Note: accuracy based on small test sample and should be interpreted as proof-of-concept, not clinical reliability.
-
-## 🎯 Product Thinking & Tradeoffs
-- Model simplicity: used shallow CNN to ensure speed and explainability
-- Business value: demonstrates feasibility of using off-the-shelf tools (Gradio, TensorFlow) to rapidly prototype health tech applications.
-- Scalability: easily extendable to more data or a transfer learning backbone like MobileNetV2 for higher accuracy and generalizability.
 
 ## 📌 Limitations
 - Small dataset (253 images) limits generalizability
