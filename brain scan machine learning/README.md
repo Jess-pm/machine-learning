@@ -5,49 +5,55 @@ This project was developed as part of my portfolio to demonstrate proficiency in
 This project is for educational purposes. Data sources remain the property of their respective owners.
 
 # 🧠 Brain Tumor Detection from MRI Images using Convolutional Neural Network (CNN)
-This project demonstrates the use of a CNN to classify brain MRI scans as either **has tumour** or **no tumour**. It was developed as a personal machine learning portfolio project using a dataset of **253 images** (155 with brain tumors, 98 without), trained in Google Colab, and deployed via a Gradio interface for interactive testing.
+This project demonstrates a custom built CNN that classifies brain MRI scans as tumorous or non-tumorous. It was developed using a small dataset of 253 images, built in Google Colab, entirely using Python with TensorFlow, NumPy, OpenCV, and deployed via Gradio for interactive user testing.
 Google colab link: https://drive.google.com/file/d/1MJdLVn2ar-2OGSmfFQ1jcGBtptmG7z_-/view?usp=sharing
 
 ## 📌 Project Highlights
-- Trained a binary image classifier using CNN on grayscale brain MRI scans
-- Achieved 100% test accuracy on the evaluation set (see limitations below)
-- Deployed with a user-friendly **Gradio** interface for live image classification
-- Built and tested entirely in **Google Colab**
+- Built a custom CNN model from scratch using **TensorFlow/Keras**
+- Preprocessed image data using **OpenCV** and **NumPy**
+- Achieved **100% test accuracy** (small dataset caveat)
+- Deployed a real-time prediction interface using **Gradio**
+- Demonstrates tradeoff analysis between model complexity and data scale
 
 ## 🗂️ Dataset Overview
 - Total images used: **253**
   - **155** MRI images with brain tumors
   - **98** MRI images of healthy brains
 - Images were labeled into two classes: `yes` (tumor), `no` (healthy)
+
 - Source: provided by NTUC LearningHub course instructor
 
 ## 🔎 Data Preprocessing
-- All images were:
-  - Resized to **224x224 pixels**
-  - Converted to **grayscale**
-  - Normalized to scale pixel values between 0 and 1
+- Images loaded using **OpenCV** and resized to **224x224* pixels for optimal pixel retention
+- Normalized using NumPy to scale pixel values to '[0, 1]'
+- Image resizing and normalization were critical to reduce compute cost while preserving classification accuracy
+- Split data manually for demonstration: last 10 images as test set (for full project, use 'train_test_split')
 
 > ⚖️ **No class balancing was applied.**
 Although the dataset had more tumor images (155 vs 98), the class imbalance was not severe enough to cause biased learning. Evaluation metrics and model performance showed the classifier handled both classes reliably without oversampling or undersampling.
 
 ## 🧠 Model Architecture
-Sequential CNN Model:
-- Conv2D → MaxPooling2D
-- Conv2D → MaxPooling2D
-- Flatten
-- Dense (128) + ReLU
-- Dropout (0.5)
+Sequential CNN (Keras):
+- Conv2D (32) → MaxPooling
+- Conv2D (64) → MaxPooling
+- Conv2D (128) → MaxPooling
+- Flatten → Dense (128) + ReLU
 - Dense (1) + Sigmoid
 
 ## 🧠 Compile Model
 - Loss function: binary_crossentropy
 - Optimizer: Adam
-- Evaluation metric: accuracy
 - Epochs trained: 10
 
 ## ✅ Model Performance
 - Test accuracy: 1.0000
-Test loss: 0.0708
+- Test loss: 0.0708
+- Note: accuracy based on small test sample and should be interpreted as proof-of-concept, not clinical reliability.
+
+## 🎯 Product Thinking & Tradeoffs
+- Model simplicity: used shallow CNN to ensure speed and explainability
+- Business value: demonstrates feasibility of using off-the-shelf tools (Gradio, TensorFlow) to rapidly prototype health tech applications.
+- Scalability: easily extendable to more data or a transfer learning backbone like MobileNetV2 for higher accuracy and generalizability.
 
 ## 📌 Limitations
 - Small dataset (253 images) limits generalizability
